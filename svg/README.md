@@ -1,2 +1,2 @@
 В этой папке будут храниться все необходимые SVG-файлы для сайта.
-git@github.com:sashakozub/zakrivayuschiy-teg-f.git
+https://sashakozub.github.io/zakrivayuschiy-teg-f/
