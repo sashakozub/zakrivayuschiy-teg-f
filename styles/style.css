@@ -15,7 +15,7 @@
 .page {
     min-inline-size: 320px;
     min-block-size: 100dvb;
-    font-family: var(--main-font);
+    font-family: var(--main-font), Arial, sans-serif;
     font-variation-settings: "wght" var(--text-weight);
     background-color: #fff;
     background-image: var(--page-background);
@@ -33,7 +33,7 @@
     padding-block: var(--header-padding-block);
     border: 2px solid #000;
     background-color: #fff;
-    font-family: var(--accent-font);
+    font-family: var(--accent-font), fantasy;
     text-align: center;
 }
 
@@ -77,35 +77,35 @@
     object-fit: cover;
     object-position: right;
 }
-.card__image_filter-original {
+.filter-original {
     filter: none;
 }
 
-.card__image_filter-warm {
+.filter-warm {
     filter: sepia(35%) saturate(70%) brightness(0.95) contrast(0.9);
 }
 
-.card__image_filter-pink {
+.filter-pink {
     filter: hue-rotate(55deg) saturate(190%) brightness(1.08) contrast(1.05);
 }
 
-.card__image_filter-violet {
+.filter-violet {
     filter: hue-rotate(18deg) saturate(140%) brightness(0.92) contrast(1.05);
 }
 
-.card__image_filter-green {
+.filter-green {
     filter: hue-rotate(145deg) saturate(85%) brightness(1.12) contrast(0.9);
 }
 
-.card__image_filter-sepia {
+.filter-sepia {
     filter: sepia(65%) saturate(55%) brightness(0.92) contrast(0.95);
 }
 
-.card__image_filter-blur {
+.filter-blur {
     filter: blur(6px) saturate(135%) brightness(1.05);
 }
 
-.card__image_filter-fade {
+.filter-fade {
     filter: sepia(30%) hue-rotate(300deg) saturate(75%) brightness(1.05) opacity(0.8);
 }
 
@@ -114,7 +114,7 @@
     top: 25px;
     right: 25px;
     z-index: 1;
-    font-family: var(--accent-font);
+    font-family: var(--accent-font), fantasy;
     font-size: 14px;
     line-height: 14px;
     opacity: 0.5;
@@ -145,12 +145,7 @@
     margin: 0;
 }
 
-
-.card__text:first-of-type {
-    margin-bottom: 20px;
-}
-
-.card__text_offset {
+.card__text + .card__text {
     margin-top: 25px;
 }
 
@@ -169,7 +164,7 @@
     align-items: center;
     border: 2px solid #000;
     background-color: #fff;
-    font-family: var(--accent-font);
+    font-family: var(--accent-font), fantasy;
     font-size: 14px;
     line-height: 90%;
     cursor: pointer;
@@ -234,6 +229,8 @@
 
 .like-icon {
     display: block;
+    inline-size: 39px;
+    block-size: 36px;
     transform-origin: center;
 }
 
@@ -342,7 +339,7 @@
 }
 
 .dialog__container {
-    padding: 30px;
+    padding: 30px 40px;
 }
 
 .dialog__content {
@@ -377,22 +374,6 @@
 }
 
 @media (width >= 1440px) {
-    .content-section {
-        width: var(--content-width);
-    }
-
-    .header {
-        padding-block: var(--header-padding-block);
-    }
-
-    .header__logo {
-        font-size: var(--header-logo-size);
-    }
-
-    .header__title {
-        font-size: var(--header-title-size);
-    }
-
     .card {
         margin-bottom: 49px;
     }
